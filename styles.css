@@ -730,45 +730,6 @@ body {
   transform: translateX(4px);
 }
 
-@media (max-width: 900px) {
-  .division-section {
-    height: 380px;
-  }
-
-  .division-content {
-    width: 60%;
-    padding: 30px;
-  }
-    .division-btn{
-        min-width: 16vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .division-section {
-    height: auto;
-    aspect-ratio: 1 / 1.1;
-  }
-
-  .division-content {
-    width: 100%;
-    padding: 26px 24px;
-    justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.6);
-  }
-
-  .division-title {
-    font-size: 1.6rem;
-  }
-
-  .division-desc {
-    font-size: 0.92rem;
-  }
-  .division-btn{
-        min-width: 16vw;
-  }
-}
-
 /* ZNK Motors – reversed layout */
 .motors-section .division-bg {
   background-position: center;
@@ -816,35 +777,6 @@ body {
   user-select: none;
 }
 
-@media (max-width: 900px) {
-  .energy-content {
-    width: 60%;
-    padding: 30px;
-  }
-}
-
-@media (max-width: 600px) {
-  .energy-section {
-    height: auto;
-    aspect-ratio: 1 / 1.1;
-  }
-
-  .energy-content {
-    width: 100%;
-    padding: 26px 24px;
-    justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.6);
-  }
-
-  .energy-title {
-    font-size: 1.6rem;
-  }
-
-  .energy-desc {
-    font-size: 0.92rem;
-  }
-}
-
 /* ZNK Residence – right layout */
 .residence-overlay {
   background: linear-gradient(
@@ -867,40 +799,110 @@ body {
   margin-left: auto;
 }
 
+/* Tablet & small laptops ≤900px */
 @media (max-width: 900px) {
+  .division-section {
+    height: 350px;
+  }
+
+  .division-content,
+  .motors-content,
+  .energy-content,
   .residence-content {
     width: 60%;
-    padding: 30px;
+    padding: 32px 28px;
+  }
+
+  .division-title {
+    font-size: 1.7rem;
+  }
+
+  .division-desc {
+    font-size: 1rem;
+  }
+
+  .division-btn {
+    width: 30%;
+    min-width: 120px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  /* Ajustăm overlay-ul ca să fie mai opac pe ecrane mici */
+  .division-overlay,
+  .motors-overlay,
+  .energy-overlay,
+  .residence-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 40%,
+      rgba(0, 0, 0, 0.45) 80%
+    );
+  }
+
+  /* La layout-ul invers (motors, residence) textul rămâne dreapta */
+  .motors-content,
+  .residence-content {
+    text-align: right;
   }
 }
 
+/* Mobile ≤600px */
 @media (max-width: 600px) {
-  .residence-section {
+  .division-section {
     height: auto;
-    aspect-ratio: 1 / 1.1;
+    min-height: 250px;
   }
 
+  .division-content,
+  .motors-content,
+  .energy-content,
   .residence-content {
     width: 100%;
-    text-align: left;
-    padding: 26px 24px;
-    justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-left: 0;
   }
 
+  .division-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .division-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .division-btn {
+    width: 60%;
+    min-width: 0;
+    padding: 9px 16px;
+    font-size: 0.9rem;
+  }
+
+  .motors-content,
+  .residence-content {
+    text-align: left;
+  }
+
+  .motors-content .division-btn,
   .residence-content .division-btn {
     margin-left: 0;
   }
 
-  .residence-title {
-    font-size: 1.6rem;
-  }
-
-  .residence-desc {
-    font-size: 0.92rem;
-  }
+  .division-overlay,.motors-overlay, .energy-overlay, .residence-overlay{
+  background:rgba(0, 0, 0, 0.75);
 }
+}
+
 
 /* Contact */
 .contact-section {
