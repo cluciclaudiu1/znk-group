@@ -3,7 +3,7 @@ body {
   margin: 0;
   background: #111;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  y-overflow: hidden;
+  x-overflow: hidden;
 }
 
 /* Header */
@@ -1242,3 +1242,4 @@ body {
   -webkit-text-fill-color: #f8f8f8 !important;
 
 }
+
