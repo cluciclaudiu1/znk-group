@@ -860,9 +860,8 @@ body {
   .motors-content,
   .energy-content,
   .residence-content {
-    width: 100%;
+    width: 85%;
     height: 100%;
-    padding: 24px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
